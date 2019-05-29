@@ -267,7 +267,7 @@ background:rgba(82,97,111,0.7);padding: 40px 50px;left:0%;
 text-align:left;max-width: 70%;bottom: 20%;
 }
 .slidercaption h3{
-	font-family: 'Calvert MT';    
+	font-family: 'Calvert MT';
 	font-weight: bold;
     font-size: 28px;
     line-height: 36px;
@@ -283,11 +283,10 @@ text-align:left;max-width: 70%;bottom: 20%;
 .lern-butn{
 	max-width: 40%;
     margin: auto;
-    border: 1px solid #fff;
     position: absolute;
     bottom: 12%;
     width: 40%;
-    left: 15%;
+    left: 0;
 }
 .lrn{
 	padding:10px;
@@ -316,6 +315,7 @@ text-align:left;max-width: 70%;bottom: 20%;
     font-family: 'HelveticaNeue';
     font-weight: 500;
     text-align: center;
+    border: 1px solid #fff;
 }
 .carousel-indicators li, .carousel-indicators .active{
 	width:20px;height:20px;
@@ -372,9 +372,9 @@ text-align:left;max-width: 70%;bottom: 20%;
 	background:url(images/chhose-bg.jpg);position:relative;
 	background-size:cover;background-position: center;
 }
-.chhose h2{ 
+.chhose h2{
 	font-family: 'Calvert MT';
-	font-weight:bold; 
+	font-weight:bold;
    font-size: 36px;
    text-align: center;
    margin: 0px;color:#fff;
@@ -411,7 +411,7 @@ text-align:left;max-width: 70%;bottom: 20%;
 	background-position: left;width:33px;height:27px;content:'';position: absolute;    right: -40px;
     bottom: -20px;
 }
-.testi-para{	
+.testi-para{
 	position: relative;
 	color:#a8b0b7;font-family: 'Calvert MT';
 	font-weight:300; font-size:20px;line-height:25px;    max-width: 80%;
@@ -527,7 +527,7 @@ width:100%
 	margin:30px auto 0px;background:#d22735;padding:8px 38px;text-align:center;border-color:transparent; border-radius:6px;color:#fff;font-weight:600;    line-height: 21px;
 }
 .proposal-form label{
-font-weight:500;	
+font-weight:500;
 }
 .rvrcity {
   color: #fff;
@@ -651,8 +651,8 @@ div.wpcf7-response-output{
 	}.call-action h3{
 		font-size:20px;
 	}
-	
-	
+
+
 }
 @media (max-width:767px){
     .address {
@@ -688,6 +688,6 @@ div.wpcf7-response-output{
 	}.lern-butn{
 		z-index:10;
 	}
-	
-	
+
+
 }

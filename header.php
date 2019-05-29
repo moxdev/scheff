@@ -19,8 +19,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php echo bloginfo("template_directory"); ?>/css/owl.carousel.min.css">
-<link rel="stylesheet" href="<?php echo bloginfo("template_directory"); ?>/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="<?php echo bloginfo( 'template_directory' ); ?>/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<?php echo bloginfo( 'template_directory' ); ?>/css/owl.theme.default.min.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<?php wp_head(); ?>
 </head>
@@ -39,8 +39,8 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="logo">
-                    <a href="http://scheffreslaundry.com";><img src="<?php echo bloginfo("template_directory"); ?>/images/logo.png" class="img-responsive"></a>
-                    <?php //the_custom_logo(); ?>
+					<a href="http://scheffreslaundry.com";><img src="<?php echo bloginfo( 'template_directory' ); ?>/images/logo.png" class="img-responsive"></a>
+					<?php // the_custom_logo(); ?>
 					</div>
 				</div>
 				<div class="col-sm-9">
@@ -50,71 +50,84 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="call-action text-center">
-							<?php dynamic_sidebar("header-1"); ?>
+							<?php dynamic_sidebar( 'header-1' ); ?>
 						</div>
 					</div><div class="clearfix"></div>
 					</div><div class="clearfix"></div>
 					<div class="col-lg-12 col-md-12 hidden-xs hidden-sm">
 						<ul class="main_nav">
-                        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-			                   </ul>
-					</div>	
+							   </ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-    <?php if(is_front_page()){ ?>
-         <div class="slider">
+	<?php if ( is_front_page() ) { ?>
+		 <div class="slider">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						<?php
-							$sliderargs = array(
-								'tax_query' => array(
+							$sliderargs  = array(
+								'tax_query'      => array(
 									array(
 										'taxonomy' => 'state_art',
-										'field' => 'slug',
-										'terms' => array( 'home-page' )
+										'field'    => 'slug',
+										'terms'    => array( 'home-page' ),
 									),
 								),
-								'post_type' => 'slider',
+								'post_type'      => 'slider',
 								'posts_per_page' => -1,
-								'order' => 'ASC',
+								'order'          => 'ASC',
 							);
-							$slide = 1;
+							$slide       = 1;
 							$slidedotsli = 0;
-							$sliderquery = new WP_Query($sliderargs);
-					
-						?><ol class="carousel-indicators">
-							<?php
-								while ( $sliderquery->have_posts() ) : $sliderquery->the_post();
+							$sliderquery = new WP_Query( $sliderargs );
+
 							?>
-							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $slidedotsli; ?>" class="<?php if($slidedotsli == 0){echo "active";}?>"></li>
-							<?php 
-							$slidedotsli++;
+						<ol class="carousel-indicators">
+							<?php
+							while ( $sliderquery->have_posts() ) :
+								$sliderquery->the_post();
+								?>
+							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $slidedotsli; ?>" class="
+																								  <?php
+																									if ( $slidedotsli == 0 ) {
+																										echo 'active';}
+																									?>
+							"></li>
+								<?php
+								$slidedotsli++;
 							endwhile;
 							?>
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<?php
-								while ( $sliderquery->have_posts() ) : $sliderquery->the_post();
-							?>
-							<div class="item <?php if($slide == 1){echo "active";}?>">
-								<!--<img src="<?php //echo get_template_directory_uri(); ?>/images/banner-1.jpg" alt="...">-->
-								<?php the_post_thumbnail(array(1600, 945)); ?>
+							while ( $sliderquery->have_posts() ) :
+								$sliderquery->the_post();
+								?>
+							<div class="item
+								<?php
+								if ( $slide == 1 ) {
+									echo 'active';}
+								?>
+							">
+								<!--<img src="<?php // echo get_template_directory_uri(); ?>/images/banner-1.jpg" alt="...">-->
+								<?php the_post_thumbnail( array( 1600, 945 ) ); ?>
 								<div class="slider_content">
-                                <div class="item active">
-        
+								<div class="item active">
 
-									<?php the_content(); ?>
-								
+
+								<?php the_content(); ?>
+
 </div>
 </div>
 							</div>
-							<?php 
+								<?php
 								$slide++;
 								endwhile;
 							?>
-					
+
 						<!-- Controls -->
 						<a class="left carousel-control custom_sars" href="#carousel-example-generic" role="button" data-slide="prev">
 							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -127,7 +140,7 @@
 					</div>
 				</div>
 			</div>
-		
+
 		<?php } ?>
 
 		<!-- .site-header -->
