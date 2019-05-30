@@ -1,74 +1,10 @@
-/*
-Theme Name: Scheffres Laundry
-Theme URI: https://wordpress.org/themes/scheffreslaundry/
-Author: the WordPress team
-Author URI: https://wordpress.org/
-Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
-Version: 1.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
-Text Domain: scheffreslaundry
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-
-
-/**
- * Table of Contents
- *
- * 1.0 - Normalize
- * 2.0 - Genericons
- * 3.0 - Typography
- * 4.0 - Elements
- * 5.0 - Forms
- * 6.0 - Navigation
- *   6.1 - Links
- *   6.2 - Menus
- * 7.0 - Accessibility
- * 8.0 - Alignments
- * 9.0 - Clearings
- * 10.0 - Widgets
- * 11.0 - Content
- *    11.1 - Header
- *    11.2 - Posts and pages
- *    11.3 - Post Formats
- *    11.4 - Comments
- *    11.5 - Sidebar
- *    11.6 - Footer
- * 12.0 - Media
- *    12.1 - Captions
- *    12.2 - Galleries
- * 13.0 - Multisite
- * 14.0 - Media Queries
- *    14.1 - >= 710px
- *    14.2 - >= 783px
- *    14.3 - >= 910px
- *    14.4 - >= 985px
- *    14.5 - >= 1200px
- * 15.0 - Print
- */
-
-
-/**
- * 1.0 - Normalize
- *
- * Normalizing styles have been helped along thanks to the fine work of
- * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
- */
-
 @charset "utf-8";
-
 /* CSS Document */
+
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueLight.eot');
-  src: url('fonts/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueLight.woff2') format('woff2'),
-    url('fonts/HelveticaNeueLight.woff') format('woff'),
-    url('fonts/HelveticaNeueLight.ttf') format('truetype'),
-    url('fonts/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg');
+  src: url('fonts/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueLight.woff2') format('woff2'), url('fonts/HelveticaNeueLight.woff') format('woff'), url('fonts/HelveticaNeueLight.ttf') format('truetype'), url('fonts/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg');
   font-weight: 300;
   font-style: normal;
 }
@@ -76,11 +12,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'Calvert MT';
   src: url('fonts/CalvertMT.eot');
-  src: url('fonts/CalvertMT.eot?#iefix') format('embedded-opentype'),
-    url('fonts/CalvertMT.woff2') format('woff2'),
-    url('fonts/CalvertMT.woff') format('woff'),
-    url('fonts/CalvertMT.ttf') format('truetype'),
-    url('fonts/CalvertMT.svg#CalvertMT') format('svg');
+  src: url('fonts/CalvertMT.eot?#iefix') format('embedded-opentype'), url('fonts/CalvertMT.woff2') format('woff2'), url('fonts/CalvertMT.woff') format('woff'), url('fonts/CalvertMT.ttf') format('truetype'), url('fonts/CalvertMT.svg#CalvertMT') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -88,11 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueBold.eot');
-  src: url('fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueBold.woff2') format('woff2'),
-    url('fonts/HelveticaNeueBold.woff') format('woff'),
-    url('fonts/HelveticaNeueBold.ttf') format('truetype'),
-    url('fonts/HelveticaNeueBold.svg#HelveticaNeueBold') format('svg');
+  src: url('fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueBold.woff2') format('woff2'), url('fonts/HelveticaNeueBold.woff') format('woff'), url('fonts/HelveticaNeueBold.ttf') format('truetype'), url('fonts/HelveticaNeueBold.svg#HelveticaNeueBold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -100,11 +28,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'Calvert MT';
   src: url('fonts/CalvertMT-Bold.eot');
-  src: url('fonts/CalvertMT-Bold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/CalvertMT-Bold.woff2') format('woff2'),
-    url('fonts/CalvertMT-Bold.woff') format('woff'),
-    url('fonts/CalvertMT-Bold.ttf') format('truetype'),
-    url('fonts/CalvertMT-Bold.svg#CalvertMT-Bold') format('svg');
+  src: url('fonts/CalvertMT-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/CalvertMT-Bold.woff2') format('woff2'), url('fonts/CalvertMT-Bold.woff') format('woff'), url('fonts/CalvertMT-Bold.ttf') format('truetype'), url('fonts/CalvertMT-Bold.svg#CalvertMT-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -112,11 +36,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueMedium.eot');
-  src: url('fonts/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueMedium.woff2') format('woff2'),
-    url('fonts/HelveticaNeueMedium.woff') format('woff'),
-    url('fonts/HelveticaNeueMedium.ttf') format('truetype'),
-    url('fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg');
+  src: url('fonts/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueMedium.woff2') format('woff2'), url('fonts/HelveticaNeueMedium.woff') format('woff'), url('fonts/HelveticaNeueMedium.ttf') format('truetype'), url('fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg');
   font-weight: 500;
   font-style: normal;
 }
@@ -124,11 +44,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueLight_1.eot');
-  src: url('fonts/HelveticaNeueLight_1.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueLight_1.woff2') format('woff2'),
-    url('fonts/HelveticaNeueLight_1.woff') format('woff'),
-    url('fonts/HelveticaNeueLight_1.ttf') format('truetype'),
-    url('fonts/HelveticaNeueLight_1.svg#HelveticaNeueLight') format('svg');
+  src: url('fonts/HelveticaNeueLight_1.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueLight_1.woff2') format('woff2'), url('fonts/HelveticaNeueLight_1.woff') format('woff'), url('fonts/HelveticaNeueLight_1.ttf') format('truetype'), url('fonts/HelveticaNeueLight_1.svg#HelveticaNeueLight') format('svg');
   font-weight: 300;
   font-style: normal;
 }
@@ -136,11 +52,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueBold_1.eot');
-  src: url('fonts/HelveticaNeueBold_1.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueBold_1.woff2') format('woff2'),
-    url('fonts/HelveticaNeueBold_1.woff') format('woff'),
-    url('fonts/HelveticaNeueBold_1.ttf') format('truetype'),
-    url('fonts/HelveticaNeueBold_1.svg#HelveticaNeueBold') format('svg');
+  src: url('fonts/HelveticaNeueBold_1.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueBold_1.woff2') format('woff2'), url('fonts/HelveticaNeueBold_1.woff') format('woff'), url('fonts/HelveticaNeueBold_1.ttf') format('truetype'), url('fonts/HelveticaNeueBold_1.svg#HelveticaNeueBold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -148,11 +60,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueItalic.eot');
-  src: url('fonts/HelveticaNeueItalic.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueItalic.woff2') format('woff2'),
-    url('fonts/HelveticaNeueItalic.woff') format('woff'),
-    url('fonts/HelveticaNeueItalic.ttf') format('truetype'),
-    url('fonts/HelveticaNeueItalic.svg#HelveticaNeueItalic') format('svg');
+  src: url('fonts/HelveticaNeueItalic.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueItalic.woff2') format('woff2'), url('fonts/HelveticaNeueItalic.woff') format('woff'), url('fonts/HelveticaNeueItalic.ttf') format('truetype'), url('fonts/HelveticaNeueItalic.svg#HelveticaNeueItalic') format('svg');
   font-weight: 100;
   font-style: italic;
 }
@@ -160,11 +68,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'CalvertMT';
   src: url('fonts/CalvertMT-Light.eot');
-  src: url('fonts/CalvertMT-Light.eot?#iefix') format('embedded-opentype'),
-    url('fonts/CalvertMT-Light.woff2') format('woff2'),
-    url('fonts/CalvertMT-Light.woff') format('woff'),
-    url('fonts/CalvertMT-Light.ttf') format('truetype'),
-    url('fonts/CalvertMT-Light.svg#CalvertMT-Light') format('svg');
+  src: url('fonts/CalvertMT-Light.eot?#iefix') format('embedded-opentype'), url('fonts/CalvertMT-Light.woff2') format('woff2'), url('fonts/CalvertMT-Light.woff') format('woff'), url('fonts/CalvertMT-Light.ttf') format('truetype'), url('fonts/CalvertMT-Light.svg#CalvertMT-Light') format('svg');
   font-weight: 300;
   font-style: normal;
 }
@@ -172,11 +76,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: 'HelveticaNeue';
   src: url('fonts/HelveticaNeueRegular.eot');
-  src: url('fonts/HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/HelveticaNeueRegular.woff2') format('woff2'),
-    url('fonts/HelveticaNeueRegular.woff') format('woff'),
-    url('fonts/HelveticaNeueRegular.ttf') format('truetype'),
-    url('fonts/HelveticaNeueRegular.svg#HelveticaNeueRegular') format('svg');
+  src: url('fonts/HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueRegular.woff2') format('woff2'), url('fonts/HelveticaNeueRegular.woff') format('woff'), url('fonts/HelveticaNeueRegular.ttf') format('truetype'), url('fonts/HelveticaNeueRegular.svg#HelveticaNeueRegular') format('svg');
   font-weight: 100;
   font-style: normal;
 }
@@ -201,6 +101,11 @@ ul {
 a,
 a:hover {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .top-header {
@@ -246,6 +151,8 @@ a:hover {
 }
 
 .main_nav {
+  float: right;
+  clear: both;
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -361,13 +268,17 @@ a:hover {
   color: #fff;
   padding: 10px;
   background-color: #142748;
-  width: 64%;
+  width: 100%;
   font-size: 18px;
   display: inline-block;
   font-family: 'HelveticaNeue';
   font-weight: 500;
   text-align: center;
   border: 1px solid #fff;
+}
+
+.carousel-control {
+  display: none;
 }
 
 .carousel-indicators li,
@@ -393,7 +304,7 @@ a:hover {
 
 .welcm-desc {
   color: #231f20;
-  text-align: justify;
+  /* text-align: justify; */
   line-height: 35px;
   font-family: 'HelveticaNeue';
   font-weight: 500;
@@ -607,7 +518,6 @@ a:hover {
 .foot-para {
   line-height: 26px;
   color: #fff;
-  margin: ;
 }
 
 .footer-line {
@@ -703,7 +613,8 @@ a:hover {
 .img-responsive,
 .thumbnail a>img,
 .thumbnail>img {
-  width: 100%
+  width: 100%;
+  object-fit: cover;
 }
 
 .car-list li {
@@ -722,6 +633,9 @@ a:hover {
 
 .logo {
   margin-top: 15px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .input_submit {
@@ -840,7 +754,7 @@ div.wpcf7-response-output {
 
 @media (max-width:1200px) {
   .slider-butn {
-    bottom: 13%;
+    bottom: 22%;
   }
 
   .slidercaption.carousel-caption {
@@ -860,7 +774,7 @@ div.wpcf7-response-output {
   }
 
   .lern-butn {
-    max-width: 60%;
+    /* max-width: 60%; */
     margin: auto;
     border: 1px solid #fff;
     position: absolute;
@@ -905,7 +819,9 @@ div.wpcf7-response-output {
     font-size: 20px;
   }
 
-
+  .slidercaption.carousel-caption h1 {
+    font-size: 48px;
+  }
 }
 
 @media (max-width:767px) {
@@ -959,6 +875,10 @@ div.wpcf7-response-output {
   .lern-butn {
     z-index: 10;
   }
+}
 
-
+@media only screen and (min-width: 950px) {
+  .carousel-inner>.item>img {
+    max-height: 550px;
+  }
 }
