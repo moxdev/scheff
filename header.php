@@ -35,33 +35,21 @@
 		</div>
 	</div> -->
 	<div class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="logo">
-						<a href="http://scheffreslaundry.com";><img src="<?php echo bloginfo("template_directory"); ?>/images/logo.png" class="img-responsive"></a>
-						<?php //the_custom_logo(); ?>
-					</div>
-				</div>
-				<div class="col-sm-9">
-					<div class="top-head">
-						<div class="col-sm-6">
-							<ul class="main_nav">
-								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-							</ul>
-					</div>
-					<div class="col-sm-6">
-						<div class="call-action text-center">
-							<?php dynamic_sidebar( 'header-1' ); ?>
-						</div>
-					</div><div class="clearfix"></div>
-					</div><div class="clearfix"></div>
-					<div class="col-lg-12 col-md-12 hidden-xs hidden-sm">
-					</div>
-				</div>
+		<div class="wrapper">
+			<div class="logo">
+				<a href="http://scheffreslaundry.com"><img src="<?php echo bloginfo( 'template_directory' ); ?>/images/logo.png" class="img-responsive"></a>
+				<?php // the_custom_logo(); ?>
 			</div>
-		</div>
-	</div>
+
+			<div class="call-to-action">
+				<ul class="main_nav">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</ul>
+				<?php dynamic_sidebar( 'header-1' ); ?>
+			</div>
+		</div><!-- .wrapper -->
+	</div><!-- .header -->
+
 	<?php if ( is_front_page() ) { ?>
 		 <div class="slider">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

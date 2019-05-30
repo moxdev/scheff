@@ -633,9 +633,6 @@ img {
 
 .logo {
   margin-top: 15px;
-  max-width: 250px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .input_submit {
@@ -761,10 +758,10 @@ div.wpcf7-response-output {
     bottom: 21%;
   }
 
-  .main_nav li a {
-    padding: 5px 3px;
-    font-size: 13px;
-  }
+  // .main_nav li a {
+  //   padding: 5px 3px;
+  //   font-size: 13px;
+  // }
 }
 
 @media (min-width:767px) and (max-width:992px) {

@@ -56,8 +56,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
 
-// @import "variables-site/variables-site";
-// @import "mixins/mixins-master";
+/* --------------------------------------------------------------*/
+@import "variables/variables";
+@import "mixins/mixins-master";
+/* --------------------------------------------------------------*/
 
 @import "original-css";
 @import "header";
+
+#wprmenu_menu_ul .sub-menu {
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  position: static;
+}

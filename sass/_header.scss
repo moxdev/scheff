@@ -1,0 +1,101 @@
+.header {
+
+  .wrapper {
+    @include padding-left-right;
+
+    @include respond-to(x-small) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media only screen and (min-width: 993px) {
+      align-items: flex-end;
+    }
+  }
+
+  .logo {
+    @include test(red);
+    max-width: 250px;
+    margin: 0 auto;
+
+    @include respond-to(x-small) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: 993px) {
+      flex: 1;
+    }
+  }
+
+  .call-to-action {
+    margin-top: 15px;
+    @include test(red);
+
+    @include respond-to(x-small) {
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media only screen and (min-width: 993px) {
+      flex: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .main_nav {
+      display: none;
+      float: none;
+      margin: 0 1em 0 0;
+
+      @media only screen and (min-width: 993px) {
+        display: block;
+      }
+
+      @include respond-to(x-large) {
+        margin-right: 3em;
+
+      }
+
+      li {
+
+        a {
+          // font-size: 16px;
+
+          @include respond-to(large) {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+
+    h3 {
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto;
+      font-size: 20px;
+      background-color: #d22735;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-family: 'HelveticaNeue';
+      color: #fff;
+      padding: 8px 15px;
+      font-weight: bold;
+
+      @media only screen and (min-width: 993px) {
+        font-size: 18px;
+      }
+
+      @include respond-to(large) {
+        font-size: 1.5em;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
