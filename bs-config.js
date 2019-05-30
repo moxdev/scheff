@@ -19,7 +19,9 @@ module.exports = {
     }
   },
   "files": [
+    './style.css',
     'style.css',
+    '**/*.css',
     '**/*.php',
     'js/**/*.js',
     'plugins/**/*.js',
@@ -32,6 +34,7 @@ module.exports = {
   "server": false,
   "proxy": 'http://scheffres-new.test/', // edit url with dev site url
   "port": 3000,
+  "injectChanges": false,
   "middleware": false,
   "serveStatic": [],
   "ghostMode": {
@@ -64,7 +67,6 @@ module.exports = {
   "reloadDebounce": 0,
   "reloadThrottle": 0,
   "plugins": [],
-  "injectChanges": true,
   "startPath": null,
   "minify": true,
   "host": null,

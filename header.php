@@ -27,26 +27,28 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<div class="site-inner">
+	<!-- <div class="site-inner">
 		<div class="top-header">
 		<div class="container">
 			<div class="row"><div class="col-sm-12"></div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="logo">
-					<a href="http://scheffreslaundry.com";><img src="<?php echo bloginfo( 'template_directory' ); ?>/images/logo.png" class="img-responsive"></a>
-					<?php // the_custom_logo(); ?>
+						<a href="http://scheffreslaundry.com";><img src="<?php echo bloginfo("template_directory"); ?>/images/logo.png" class="img-responsive"></a>
+						<?php //the_custom_logo(); ?>
 					</div>
 				</div>
 				<div class="col-sm-9">
 					<div class="top-head">
 						<div class="col-sm-6">
-						<h1>Trust. Pride. Care.</h1>
+							<ul class="main_nav">
+								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+							</ul>
 					</div>
 					<div class="col-sm-6">
 						<div class="call-action text-center">
@@ -55,10 +57,6 @@
 					</div><div class="clearfix"></div>
 					</div><div class="clearfix"></div>
 					<div class="col-lg-12 col-md-12 hidden-xs hidden-sm">
-						<ul class="main_nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-
-							   </ul>
 					</div>
 				</div>
 			</div>
@@ -114,6 +112,7 @@
 							">
 								<!--<img src="<?php // echo get_template_directory_uri(); ?>/images/banner-1.jpg" alt="...">-->
 								<?php the_post_thumbnail( array( 1600, 945 ) ); ?>
+								<?php // the_post_thumbnail( 'home-slider' ); ?>
 								<div class="slider_content">
 								<div class="item active">
 

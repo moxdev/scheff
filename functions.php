@@ -82,6 +82,7 @@ function scheffreslaundry_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 9999 );
+	add_image_size( 'home-slider', 1600, 500, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -182,7 +183,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Header - Call Today', 'scheffreslaundry' ),
 		'id'            => 'header-1',
@@ -192,7 +193,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Homepage - Services', 'scheffreslaundry' ),
 		'id'            => 'homepage-1',
@@ -202,7 +203,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 		register_sidebar( array(
 		'name'          => __( 'Homepage - Why Choose Us', 'scheffreslaundry' ),
 		'id'            => 'homepage-2',
@@ -212,7 +213,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 	    register_sidebar( array(
 		'name'          => __( 'Homepage - Proud Member of', 'scheffreslaundry' ),
 		'id'            => 'homepage-3',
@@ -222,7 +223,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer - Areas Served', 'scheffreslaundry' ),
 		'id'            => 'footer-1',
@@ -232,7 +233,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer - About Us', 'scheffreslaundry' ),
 		'id'            => 'footer-2',
@@ -242,7 +243,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer - Important Links', 'scheffreslaundry' ),
 		'id'            => 'footer-3',
@@ -252,7 +253,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer - Follow Us', 'scheffreslaundry' ),
 		'id'            => 'footer-4',
@@ -262,7 +263,7 @@ function scheffreslaundry_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
-	
+
 		register_sidebar( array(
 		'name'          => __( 'Footer - All Right Reserved', 'scheffreslaundry' ),
 		'id'            => 'footer-5',
@@ -518,7 +519,7 @@ function scheffreslaundry_widget_tag_cloud_args( $args ) {
 	$args['largest']  = 1;
 	$args['smallest'] = 1;
 	$args['unit']     = 'em';
-	$args['format']   = 'list'; 
+	$args['format']   = 'list';
 
 	return $args;
 }
@@ -528,7 +529,7 @@ add_filter( 'widget_tag_cloud_args', 'scheffreslaundry_widget_tag_cloud_args' );
 
 	add_action('init', 'slider_sota');
 
- 
+
 
 	function slider_sota() {
 
@@ -588,29 +589,29 @@ add_filter( 'widget_tag_cloud_args', 'scheffreslaundry_widget_tag_cloud_args' );
 
 	}
 
-	
 
-	function slider_meta_boxes() {		
+
+	function slider_meta_boxes() {
 
 		add_meta_box( 'Extra', 'Heading', 'slider_position_title', 'slider', 'normal', 'high' );
 
 	}
 
-	
+
 
 	function slider_position_title()
 
 	{
 
-		global $post;	
+		global $post;
 
 		$headingvalues = get_post_custom( $post->ID );
 
 		$headingtitle = isset( $headingvalues['heading'] ) ? esc_attr( $jbvalues['heading'][0] ) : '' ;
 
-		//$required_jobtype = isset( $values['required_jobtype'] ) ? esc_attr( $values['required_jobtype'][0] ) : '' ;		
+		//$required_jobtype = isset( $values['required_jobtype'] ) ? esc_attr( $values['required_jobtype'][0] ) : '' ;
 
-		wp_nonce_field( 'my_jobtitleposition_nonce', 'netsterz_jobtitleposition_nonce' );	
+		wp_nonce_field( 'my_jobtitleposition_nonce', 'netsterz_jobtitleposition_nonce' );
 
 		?>
 
@@ -632,15 +633,15 @@ add_filter( 'widget_tag_cloud_args', 'scheffreslaundry_widget_tag_cloud_args' );
 
         </select>-->
 
-		<?php    
+		<?php
 
 	}
 
-	
+
 
 	add_action('save_post', 'stateslider_title_save');
 
-	
+
 
 	function stateslider_title_save($post_id)
 
@@ -650,19 +651,19 @@ add_filter( 'widget_tag_cloud_args', 'scheffreslaundry_widget_tag_cloud_args' );
 
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 
-     
+
 
     // if our nonce isn't there, or we can't verify it, bail
 
     if( !isset( $_POST['stateart_slider_nonce'] ) || !wp_verify_nonce( $_POST['stateart_slider_nonce'], 'my_stateart_slider_nonce' ) ) return;
 
-     
+
 
     // if our current user can't edit this post, bail
 
     if( !current_user_can( 'edit_post' ) ) return;
 
-	
+
 
 		if( isset( $_POST['heading'] ) ) {
 
@@ -676,7 +677,7 @@ add_filter( 'widget_tag_cloud_args', 'scheffreslaundry_widget_tag_cloud_args' );
 
 		}*/
 
-		
+
 
 	}
 
@@ -752,13 +753,13 @@ function create_slider_taxonomies()
 
         'title' => 'Title',
 
-        'pc' => 'Slider Category', 
+        'pc' => 'Slider Category',
 
 		'date' => 'Date'
 
 		);
 
-		
+
 
 		return $pcolumns;
 
@@ -766,13 +767,13 @@ function create_slider_taxonomies()
 
 	add_action('manage_slider_posts_custom_column', 'ST4_columns_slider_content', 10, 2);
 
-	
 
-	function ST4_columns_slider_content($column_name, $post_ID) {		
+
+	function ST4_columns_slider_content($column_name, $post_ID) {
 
 		$sliderterms = get_the_terms($post->ID, 'state_art' );
 
-		
+
 
 		if ($sliderterms && ! is_wp_error($sliderterms)) :
 
@@ -799,7 +800,7 @@ function create_slider_taxonomies()
 
 	add_action('init', 'post_type_discog');
 
- 
+
 
 	function post_type_discog() {
 
@@ -859,29 +860,29 @@ function create_slider_taxonomies()
 
 	}
 
-	
 
-	function testimonials_meta_boxes() {		
+
+	function testimonials_meta_boxes() {
 
 		add_meta_box( 'JobPosition', 'Designation', 'testimonial_position_title', 'testimonial', 'normal', 'high' );
 
 	}
 
-	
+
 
 	function testimonial_position_title()
 
 	{
 
-		global $post;	
+		global $post;
 
 		$jbvalues = get_post_custom( $post->ID );
 
 		$jbtitle = isset( $jbvalues['jobposttitle'] ) ? esc_attr( $jbvalues['jobposttitle'][0] ) : '' ;
 
-		//$required_jobtype = isset( $values['required_jobtype'] ) ? esc_attr( $values['required_jobtype'][0] ) : '' ;		
+		//$required_jobtype = isset( $values['required_jobtype'] ) ? esc_attr( $values['required_jobtype'][0] ) : '' ;
 
-		wp_nonce_field( 'my_jobtitleposition_nonce', 'netsterz_jobtitleposition_nonce' );	
+		wp_nonce_field( 'my_jobtitleposition_nonce', 'netsterz_jobtitleposition_nonce' );
 
 		?>
 
@@ -903,15 +904,15 @@ function create_slider_taxonomies()
 
         </select>-->
 
-		<?php    
+		<?php
 
 	}
 
-	
+
 
 	add_action('save_post', 'job_position_title_save');
 
-	
+
 
 	function job_position_title_save($post_id)
 
@@ -921,19 +922,19 @@ function create_slider_taxonomies()
 
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 
-     
+
 
     // if our nonce isn't there, or we can't verify it, bail
 
     if( !isset( $_POST['netsterz_jobtitleposition_nonce'] ) || !wp_verify_nonce( $_POST['netsterz_jobtitleposition_nonce'], 'my_jobtitleposition_nonce' ) ) return;
 
-     
+
 
     // if our current user can't edit this post, bail
 
     if( !current_user_can( 'edit_post' ) ) return;
 
-	
+
 
 		if( isset( $_POST['jobposttitle'] ) ) {
 
@@ -947,7 +948,7 @@ function create_slider_taxonomies()
 
 		}*/
 
-		
+
 
 	}
 
@@ -1023,13 +1024,13 @@ function create_discog_taxonomies()
 
         'title' => 'Title',
 
-        'pc' => 'Testimonial Category', 
+        'pc' => 'Testimonial Category',
 
 		'date' => 'Date'
 
 		);
 
-		
+
 
 		return $pcolumns;
 
@@ -1037,13 +1038,13 @@ function create_discog_taxonomies()
 
 	add_action('manage_testimonial_posts_custom_column', 'ST4_columns_testimonial_content', 10, 2);
 
-	
 
-	function ST4_columns_testimonial_content($column_name, $post_ID) {		
+
+	function ST4_columns_testimonial_content($column_name, $post_ID) {
 
 		$testimonialterms = get_the_terms($post->ID, 'testi_Cat' );
 
-		
+
 
 		if ($testimonialterms && ! is_wp_error($testimonialterms)) :
 
