@@ -41,11 +41,13 @@
 				<?php // the_custom_logo(); ?>
 			</div>
 
-			<div class="call-to-action">
+			<div class="nav-wrapper">
 				<ul class="main_nav">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</ul>
-				<?php dynamic_sidebar( 'header-1' ); ?>
+				<div class="call-to-action">
+					<?php dynamic_sidebar( 'header-1' ); ?>
+				</div>
 			</div>
 		</div><!-- .wrapper -->
 	</div><!-- .header -->
