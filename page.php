@@ -18,7 +18,7 @@ get_header(); ?>
     <h3><?php the_title(); ?>:</h3>
 		<?php
 					while ( have_posts() ) : the_post();
-						the_content();					
+						the_content();
 					endwhile;
 				?>
 </main><!-- .site-main -->

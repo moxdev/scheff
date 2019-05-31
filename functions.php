@@ -1065,3 +1065,8 @@ function create_discog_taxonomies()
 	}
 
 	/* code for testimonial custom post type stop */
+
+	/**
+	* ACF Flexible Content.
+	*/
+	require get_template_directory() . '/inc/acf-flexible-content.php';

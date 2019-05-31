@@ -30,20 +30,21 @@ if (is_page('home')) { ?>
           <div class="col-sm-12">
             <?php
 					while ( have_posts() ) : the_post();
-						the_content();					
+						the_content();
 					endwhile;
 				?>
           </div>
         </div>
       </div>
     </section>
-      <?php dynamic_sidebar("homepage-1"); ?> 
+      <?php // dynamic_sidebar("homepage-1"); ?>
+      <?php scheffreslaundry_flexible_content(); ?>
     <section class="chhose">
       <div class="container">
         <div class="row">
         <div class="col-sm-12">
         <div class="chose-list">
-          <?php dynamic_sidebar("homepage-2"); ?> 
+          <?php dynamic_sidebar("homepage-2"); ?>
           </div>
           </div>
           <div class="clearfix"></div>
@@ -58,7 +59,7 @@ if (is_page('home')) { ?>
  <div class="row">
       <div class="col-sm-12">
 		<div id="testi" class="owl-carousel owl-theme">
-       
+
 				<?php
 					$args = array(
 						'tax_query' => array(
@@ -74,48 +75,48 @@ if (is_page('home')) { ?>
 					$testi = 1;
 					$dotsli = 0;
 					$query = new WP_Query( $args  );
-			
+
 				?>
-		
+
 			<!-- Wrapper for slides -->
-				
+
 				<?php
 					while ( $query->have_posts() ) : $query->the_post();
 				?>
 				  <div class="item <?php if($testi == 1){echo "active";}?>">
-                  <div class="col-sm-12"> 
+                  <div class="col-sm-12">
           <?php $content = get_the_content();
   $trimmed_content = wp_trim_words( $content,68, '<a href="http://scheffreslaundry.com/testimonials/">...Continue Reading</a>' ); ?>
   <p class="testi-para"><?php echo $trimmed_content; ?></p>
-                     </div> 
+                     </div>
                          <div class="clearfix"></div>
 						   <p class="text-center testi-name">-<?php the_title(); ?></p>
-	                </div>				
-			<?php 
+	                </div>
+			<?php
 				$testi++;
 				endwhile;
 			?>
-          
-		
+
+
 		</div>
         </div>
         </div>
 	</div>
-   
+
     </section>
-    
+
     <section class="proud_member text-center">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-          <?php dynamic_sidebar("homepage-3"); ?> 
+          <?php dynamic_sidebar("homepage-3"); ?>
           </div>
-          
+
       </div>
     </section>
   </main>
   <!-- .site-main -->
-  
+
   <?php //get_sidebar( 'content-bottom' ); ?>
 </div>
 <!-- .content-area -->
