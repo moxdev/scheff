@@ -15,7 +15,6 @@
   }
 
   .logo {
-    @include test(red);
     max-width: 250px;
     margin: 0 auto;
 
@@ -31,7 +30,6 @@
 
   .nav-wrapper {
     margin-top: 15px;
-    @include test(red);
 
     @include respond-to(x-small) {
       margin-top: 0;

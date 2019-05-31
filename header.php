@@ -37,7 +37,7 @@
 	<div class="header">
 		<div class="wrapper">
 			<div class="logo">
-				<a href="http://scheffreslaundry.com"><img src="<?php echo bloginfo( 'template_directory' ); ?>/images/logo.png" class="img-responsive"></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo bloginfo( 'template_directory' ); ?>/images/logo.png" class="img-responsive"></a>
 				<?php // the_custom_logo(); ?>
 			</div>
 

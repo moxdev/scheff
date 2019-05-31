@@ -60,8 +60,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "variables/variables";
 @import "mixins/mixins-master";
 /* --------------------------------------------------------------*/
-
+@import "variables/typography";
 @import "original-css";
+@import "headings";
 @import "header";
 
 #wprmenu_menu_ul .sub-menu {
